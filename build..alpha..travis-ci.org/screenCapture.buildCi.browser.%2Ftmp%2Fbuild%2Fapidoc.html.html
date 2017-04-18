@@ -1,0 +1,1115 @@
+<html><head></head><body><div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a>torrent-cloud (v0.1.2)</a>
+</h1>
+<h4>A torrent client in the cloud</h4>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.torrent-cloud">module torrent-cloud</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.torrent-cloud.file">
+            function <span class="apidocSignatureSpan">torrent-cloud.</span>file
+            <span class="apidocSignatureSpan">(f, index, torrent)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">torrent-cloud.</span>file.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">torrent-cloud.</span>search</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">torrent-cloud.</span>torrents</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">torrent-cloud.</span>ws</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.torrent-cloud.file">module torrent-cloud.file</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.torrent-cloud.file.file">
+            function <span class="apidocSignatureSpan">torrent-cloud.</span>file
+            <span class="apidocSignatureSpan">(f, index, torrent)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.torrent-cloud.file.prototype">module torrent-cloud.file.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.torrent-cloud.file.prototype.cancel">
+            function <span class="apidocSignatureSpan">torrent-cloud.file.prototype.</span>cancel
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.torrent-cloud.file.prototype.createReadStream">
+            function <span class="apidocSignatureSpan">torrent-cloud.file.prototype.</span>createReadStream
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.torrent-cloud.search">module torrent-cloud.search</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.torrent-cloud.search.item">
+            function <span class="apidocSignatureSpan">torrent-cloud.search.</span>item
+            <span class="apidocSignatureSpan">(data, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.torrent-cloud.search.list">
+            function <span class="apidocSignatureSpan">torrent-cloud.search.</span>list
+            <span class="apidocSignatureSpan">(data, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.torrent-cloud.search.setproviders">
+            function <span class="apidocSignatureSpan">torrent-cloud.search.</span>setproviders
+            <span class="apidocSignatureSpan">(data, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">torrent-cloud.search.</span>_eventsCount</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">torrent-cloud.search.</span>_events</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">torrent-cloud.search.</span>domain</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">torrent-cloud.search.</span>providers</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.torrent-cloud.torrents">module torrent-cloud.torrents</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.torrent-cloud.torrents.cancelFile">
+            function <span class="apidocSignatureSpan">torrent-cloud.torrents.</span>cancelFile
+            <span class="apidocSignatureSpan">(data, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.torrent-cloud.torrents.close">
+            function <span class="apidocSignatureSpan">torrent-cloud.torrents.</span>close
+            <span class="apidocSignatureSpan">(data, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.torrent-cloud.torrents.downloadFile">
+            function <span class="apidocSignatureSpan">torrent-cloud.torrents.</span>downloadFile
+            <span class="apidocSignatureSpan">(data, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.torrent-cloud.torrents.load">
+            function <span class="apidocSignatureSpan">torrent-cloud.torrents.</span>load
+            <span class="apidocSignatureSpan">(data, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.torrent-cloud.torrents.open">
+            function <span class="apidocSignatureSpan">torrent-cloud.torrents.</span>open
+            <span class="apidocSignatureSpan">(data, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.torrent-cloud.torrents.remove">
+            function <span class="apidocSignatureSpan">torrent-cloud.torrents.</span>remove
+            <span class="apidocSignatureSpan">(data, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.torrent-cloud.torrents.trash">
+            function <span class="apidocSignatureSpan">torrent-cloud.torrents.</span>trash
+            <span class="apidocSignatureSpan">(data, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.torrent-cloud.torrents.zipAll">
+            function <span class="apidocSignatureSpan">torrent-cloud.torrents.</span>zipAll
+            <span class="apidocSignatureSpan">(data, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">torrent-cloud.torrents.</span>_eventsCount</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">torrent-cloud.torrents.</span>filesDownloading</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">torrent-cloud.torrents.</span>_events</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">torrent-cloud.torrents.</span>domain</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">torrent-cloud.torrents.</span>list</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.torrent-cloud.ws">module torrent-cloud.ws</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.torrent-cloud.ws.broadcast">
+            function <span class="apidocSignatureSpan">torrent-cloud.ws.</span>broadcast
+            <span class="apidocSignatureSpan">(d)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.torrent-cloud.ws.install">
+            function <span class="apidocSignatureSpan">torrent-cloud.ws.</span>install
+            <span class="apidocSignatureSpan">(server)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.torrent-cloud" id="apidoc.module.torrent-cloud">module torrent-cloud</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.torrent-cloud.file" id="apidoc.element.torrent-cloud.file">
+        function <span class="apidocSignatureSpan">torrent-cloud.</span>file
+        <span class="apidocSignatureSpan">(f, index, torrent)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function File(f, index, torrent) {
+	var file = this;
+	file.$f = f;
+	//TODO (@jpillora) make downloads actually fall at piece boundaries
+	var pieceSize = torrent.$engine.torrent.pieceLength;
+	file.$pieceSize = Math.ceil(MIN_PIECE_SIZE/pieceSize)*pieceSize;
+	
+	file.i = index;
+	file.downloading = false;
+	file.name = f.name;
+	file.path = f.path;
+	file.length = f.length;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.torrent-cloud.file" id="apidoc.module.torrent-cloud.file">module torrent-cloud.file</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.torrent-cloud.file.file" id="apidoc.element.torrent-cloud.file.file">
+        function <span class="apidocSignatureSpan">torrent-cloud.</span>file
+        <span class="apidocSignatureSpan">(f, index, torrent)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function File(f, index, torrent) {
+	var file = this;
+	file.$f = f;
+	//TODO (@jpillora) make downloads actually fall at piece boundaries
+	var pieceSize = torrent.$engine.torrent.pieceLength;
+	file.$pieceSize = Math.ceil(MIN_PIECE_SIZE/pieceSize)*pieceSize;
+	
+	file.i = index;
+	file.downloading = false;
+	file.name = f.name;
+	file.path = f.path;
+	file.length = f.length;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.torrent-cloud.file.prototype" id="apidoc.module.torrent-cloud.file.prototype">module torrent-cloud.file.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.torrent-cloud.file.prototype.cancel" id="apidoc.element.torrent-cloud.file.prototype.cancel">
+        function <span class="apidocSignatureSpan">torrent-cloud.file.prototype.</span>cancel
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">cancel = function () {
+		var file = this;
+		//not open
+		if(!file.$r || file.cancelled)
+			return null;
+
+		//attempt to close current download
+		if(file.$d)
+			file.$d.destroy();
+
+		//close!
+		file.cancelled = true;
+		file.$complete("cancelled");
+		file.$r = null;
+		return true;
+	}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+		return callback("Torrent not open");
+
+	torrent.$engine.destroy(function() {
+
+		//ensure all files are stopped
+		if(torrent.files) {
+			torrent.files.forEach(function(f) {
+				f.<span class="apidocCodeKeywordSpan">cancel</span>();
+			});
+		}
+
+		torrent.files = null;
+		torrent.open = false;
+		torrent.$engine = null;
+		torrents.emit("update");
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.torrent-cloud.file.prototype.createReadStream" id="apidoc.element.torrent-cloud.file.prototype.createReadStream">
+        function <span class="apidocSignatureSpan">torrent-cloud.file.prototype.</span>createReadStream
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">createReadStream = function () {
+		var file = this;
+
+		//already created
+		if(file.$r)
+			return file.$r;
+
+		//start download
+		file.downloadError = undefined;
+		file.cancelled = undefined;
+		file.downloading = true;
+		file.downloadLength = 0;
+		torrents.emit("update");
+
+		var piece = 0;
+		var piecing = false;
+		var waiting = false;
+		var r = file.$r = new stream.Readable();
+
+		var read = r._read = function() {
+
+			//completed early
+			if(file.cancelled)
+				return;
+
+			//download one piece at a time
+			if(piecing) {
+				waiting = true;
+				return;
+			}
+			piecing = true;
+			waiting = false;
+
+			var s = piece * file.$pieceSize;
+			var e = Math.min(s + file.$pieceSize, file.length);
+
+			//EOF completed successfully
+			if(s &gt;= file.length)
+				return file.$complete();
+
+			//pull the next piece
+			var download = file.$d = file.$f.createReadStream({
+				start: s,
+				end: e - 1
+			});
+
+			//extract chunk, place in this file
+			var monitor = through(function transform(b) {
+				file.downloadLength += b.length;
+				torrents.emit("update");
+				r.push(b);
+			}, function(flush) {
+				//next piece
+				piece++;
+				piecing = false;
+				if(waiting)
+					read();
+				flush();
+			});
+
+			download.pipe(monitor);
+		};
+
+		return r;
+	}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+			var e = Math.min(s + file.$pieceSize, file.length);
+
+			//EOF completed successfully
+			if(s &gt;= file.length)
+				return file.$complete();
+
+			//pull the next piece
+			var download = file.$d = file.$f.<span class="apidocCodeKeywordSpan">createReadStream</span>({
+				start: s,
+				end: e - 1
+			});
+
+			//extract chunk, place in this file
+			var monitor = through(function transform(b) {
+				file.downloadLength += b.length;
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.torrent-cloud.search" id="apidoc.module.torrent-cloud.search">module torrent-cloud.search</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.torrent-cloud.search.item" id="apidoc.element.torrent-cloud.search.item">
+        function <span class="apidocSignatureSpan">torrent-cloud.search.</span>item
+        <span class="apidocSignatureSpan">(data, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">item = function (data, callback) {
+
+		var p = providers[data.provider];
+		if(!p)
+			return callback("Missing provider: " + data.provider);
+
+		var type = types[p.type];
+		if(!type)
+			return callback("Invalid type");
+
+		type[fnName](p, data, callback);
+	}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.torrent-cloud.search.list" id="apidoc.element.torrent-cloud.search.list">
+        function <span class="apidocSignatureSpan">torrent-cloud.search.</span>list
+        <span class="apidocSignatureSpan">(data, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">list = function (data, callback) {
+
+		var p = providers[data.provider];
+		if(!p)
+			return callback("Missing provider: " + data.provider);
+
+		var type = types[p.type];
+		if(!type)
+			return callback("Invalid type");
+
+		type[fnName](p, data, callback);
+	}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+	});
+};
+search.on("update", update);
+torrents.on("update", update);
+
+//periodically scan for new stored files
+function list() {
+	backend.<span class="apidocCodeKeywordSpan">list</span>(function(err, files) {
+		if(!err) update(files);
+	});
+}
+setInterval(list, 15*60*1000);
+list();
+
+server.on("error", function(err) {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.torrent-cloud.search.setproviders" id="apidoc.element.torrent-cloud.search.setproviders">
+        function <span class="apidocSignatureSpan">torrent-cloud.search.</span>setproviders
+        <span class="apidocSignatureSpan">(data, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">setproviders = function (data, callback) {
+	if(!data.url)
+		return callback("Missing url");
+	request.get(data.url, function(err, httpResponse, body) {
+		if(err)
+			return callback("Failed to load: " + data.url);
+		try {
+			var newProviders = JSON.parse(body);
+			//expose only the "names" to the frontend
+			var names = {};
+			for(var id in newProviders) {
+				var p = newProviders[id];
+				names[id] = p.name;
+			}
+			providers = newProviders;
+			search.providers = names;
+			search.emit("update");
+			console.log("loaded search providers: %s", Object.keys(names).join(", "));
+			callback(null, names);
+		} catch(err) {
+			return callback("Invalid JSON");
+		}
+	});
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+		} catch(err) {
+			return callback("Invalid JSON");
+		}
+	});
+};
+
+var url = process.env.SEARCH_PROVIDERS_URL;
+if(url) search.<span class="apidocCodeKeywordSpan">setproviders</span>({url:url}, function(err, p) {
+	if(err) console.error("Failed to load search providers from: %s (%s)", url, err);	
+});
+...</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.torrent-cloud.torrents" id="apidoc.module.torrent-cloud.torrents">module torrent-cloud.torrents</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.torrent-cloud.torrents.cancelFile" id="apidoc.element.torrent-cloud.torrents.cancelFile">
+        function <span class="apidocSignatureSpan">torrent-cloud.torrents.</span>cancelFile
+        <span class="apidocSignatureSpan">(data, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">cancelFile = function (data, callback) {
+	var torrent = findTorrent(data.hash);
+	if(!torrent)
+		return callback("Missing torrent");
+	var file = findFile(torrent, data.path);
+	if(!file)
+		return callback("Missing file");
+	if(!file.downloading)
+		return callback("Not downloading");
+
+	var success = file.cancel();
+	callback(success ? null : "Failed to close file");
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.torrent-cloud.torrents.close" id="apidoc.element.torrent-cloud.torrents.close">
+        function <span class="apidocSignatureSpan">torrent-cloud.torrents.</span>close
+        <span class="apidocSignatureSpan">(data, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">close = function (data, callback) {
+	var torrent = findTorrent(data.hash);
+	if(!torrent)
+		return callback("Torrent missing");
+	if(!torrent.$engine)
+		return callback("Torrent not open");
+
+	torrent.$engine.destroy(function() {
+
+		//ensure all files are stopped
+		if(torrent.files) {
+			torrent.files.forEach(function(f) {
+				f.cancel();
+			});
+		}
+
+		torrent.files = null;
+		torrent.open = false;
+		torrent.$engine = null;
+		torrents.emit("update");
+		callback(null);
+	});
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.torrent-cloud.torrents.downloadFile" id="apidoc.element.torrent-cloud.torrents.downloadFile">
+        function <span class="apidocSignatureSpan">torrent-cloud.torrents.</span>downloadFile
+        <span class="apidocSignatureSpan">(data, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">downloadFile = function (data, callback) {
+	var torrent = findTorrent(data.hash);
+	if(!torrent)
+		return callback("Missing torrent");
+	var file = findFile(torrent, data.path);
+	if(!file)
+		return callback("Missing file");
+	if(file.downloading)
+		return callback("Already downloading");
+
+	//callback to user early since uploads can take hours...
+	//user receives updates via websockets
+	callback(null);
+	file.uploading = true;
+	torrents.emit("update");
+
+	//pass copy of file to backend
+	backend.upload({
+		path: file.path,
+		length: file.length,
+		createReadStream: file.createReadStream.bind(file)
+	}, function(err) {
+		file.uploading = false;
+		//receive result from backend
+		if(err &amp;&amp; err !== "cancelled") {
+			file.downloadError = "Backend Error";
+			torrents.emit("update");
+			return console.error("backend error: ", err);
+		}
+		torrents.emit("update");
+
+		//success, now re-list
+		backend.list(function(err, files) {
+			if(err) return console.error("failed to list");
+			torrents.emit("update", files);
+		});
+	});
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.torrent-cloud.torrents.load" id="apidoc.element.torrent-cloud.torrents.load">
+        function <span class="apidocSignatureSpan">torrent-cloud.torrents.</span>load
+        <span class="apidocSignatureSpan">(data, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">load = function (data, callback) {
+	if(data.magnet) {
+		load(parse(data.magnet), callback);
+	} else if(data.torrent) {
+		request({
+			method: "GET",
+			url: data.torrent,
+			gzip: true,
+			encoding: null //buffer!
+		}, function(err, resp, body) {
+			if(err)
+				return callback("Invalid URL");
+			var t;
+			try {
+				t =  parse(body) ;
+			} catch(e) {
+				return callback("Failed to parse torrent");
+			}
+			load(t, callback);			
+		});
+	} else {
+		return callback("Invalid request");
+	}
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.torrent-cloud.torrents.open" id="apidoc.element.torrent-cloud.torrents.open">
+        function <span class="apidocSignatureSpan">torrent-cloud.torrents.</span>open
+        <span class="apidocSignatureSpan">(data, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">open = function (data, callback) {
+	var torrent = findTorrent(data.hash);
+	if(!torrent)
+		return callback("Torrent missing");
+	if(torrent.$engine)
+		return callback("Torrent already open");
+
+	//dont wait - open torrent stream, mark openning and callback
+	var engine = torrentStream(torrent.magnet, {
+		connections: 100,
+		uploads: 0, //TODO should upload, though we can be highly CPU/mem bound
+		tmp: TMP_DIR,
+		verify: true,
+		dht: true
+	});
+
+	torrent.$engine = engine;
+	torrent.openning = true;
+	torrents.emit("update");
+	callback(null);
+
+	engine.on('error', function(err) {
+		//TODO destroy torrent
+		console.error("torrent '%s' error: %s", torrent.name, err);
+	});
+
+	engine.on('ready', function() {
+		//overwrite magnet name with real name
+		torrent.name = engine.torrent.name;
+		torrent.files = engine.files.map(function(f, i) {
+			return new File(f, i, torrent);
+		});
+		torrent.openning = false;
+		torrent.open = true;
+		torrents.emit("update");
+	});
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+		files: [],
+		status: {}
+	};
+	list.push(torrent);
+	torrents.emit("update");
+
+	//loaded, now open it
+	torrents.<span class="apidocCodeKeywordSpan">open</span>({ hash:torrent.hash }, callback);
+};
+
+torrents.load = function(data, callback) {
+	if(data.magnet) {
+		load(parse(data.magnet), callback);
+	} else if(data.torrent) {
+		request({
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.torrent-cloud.torrents.remove" id="apidoc.element.torrent-cloud.torrents.remove">
+        function <span class="apidocSignatureSpan">torrent-cloud.torrents.</span>remove
+        <span class="apidocSignatureSpan">(data, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">remove = function (data, callback) {
+	var torrent = findTorrent(data.hash);
+	if(!torrent)
+		return callback("Torrent missing");
+	if(torrent.$engine)
+		return callback("Torrent is still open");
+	var i = list.indexOf(torrent);
+	list.splice(i, 1);
+	torrents.emit("update");
+
+	//clear torrent files and torrent
+	rm(path.join(TS_DIR, torrent.hash), function(err) {
+		if(err) console.log("failed to delete: %s", torrent.hash);
+	});
+	rm(path.join(TS_DIR, torrent.hash+".torrent"), function(err) {
+		if(err) console.log("failed to delete: %s.torrent", torrent.hash);
+	});
+
+	callback(null);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+};
+
+torrents.trash = function(data, callback) {
+
+	if(!data.path)
+		return callback("Missing path");
+
+	backend.<span class="apidocCodeKeywordSpan">remove</span>(data.path, function(err) {
+		if(err) return callback("Failed to trash: " + err);
+
+		backend.list(function(err, files) {
+			if(err) return callback("Failed to list: " + err);
+			torrents.emit("update", files);
+			callback(null);
+		});
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.torrent-cloud.torrents.trash" id="apidoc.element.torrent-cloud.torrents.trash">
+        function <span class="apidocSignatureSpan">torrent-cloud.torrents.</span>trash
+        <span class="apidocSignatureSpan">(data, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">trash = function (data, callback) {
+
+	if(!data.path)
+		return callback("Missing path");
+
+	backend.remove(data.path, function(err) {
+		if(err) return callback("Failed to trash: " + err);
+
+		backend.list(function(err, files) {
+			if(err) return callback("Failed to list: " + err);
+			torrents.emit("update", files);
+			callback(null);
+		});
+	});
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.torrent-cloud.torrents.zipAll" id="apidoc.element.torrent-cloud.torrents.zipAll">
+        function <span class="apidocSignatureSpan">torrent-cloud.torrents.</span>zipAll
+        <span class="apidocSignatureSpan">(data, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">zipAll = function (data, callback) {
+	var torrent = findTorrent(data.hash);
+	if(!torrent)
+		return callback("Missing torrent");
+
+	var files = torrent.files;
+
+	var archive = new Archive();
+
+	archive.on('error', function(err) {
+		console.error("zip error:", err);
+	});
+
+	async.series(files.map(function(f, i) {
+		return function(cb) {
+			archive.entry(f.createReadStream(), { name: f.path }, function(err) {
+				if(err)
+					return cb(err);
+				cb(null);
+			});
+		};
+	}), function(err) {
+		if(err) {
+			torrent.zipping = false;
+			torrents.emit("update");
+			return console.error("zip archive error:", err);
+		}
+		archive.finish();
+	});
+
+	torrent.zipping = true;
+	torrents.emit("update");
+
+	//callback to user early since uploads can take hours...
+	//user receives updates via websockets
+	callback(null);
+
+	//pass zip stream to backend
+	backend.upload({
+		path: torrent.name + ".zip",
+		length: files.reduce(function(len, f) { return len+f.length; }, 0),
+		createReadStream: function() { return archive; }
+	}, function(err) {
+		torrent.zipping = false;
+		torrents.emit("update");
+		if(err) {
+			return console.error("zip upload error:", err);
+		}
+		backend.list(function(err, files) {
+			if(err) return console.error("failed to list");
+			torrents.emit("update", files);
+		});
+	});
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.torrent-cloud.ws" id="apidoc.module.torrent-cloud.ws">module torrent-cloud.ws</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.torrent-cloud.ws.broadcast" id="apidoc.element.torrent-cloud.ws.broadcast">
+        function <span class="apidocSignatureSpan">torrent-cloud.ws.</span>broadcast
+        <span class="apidocSignatureSpan">(d)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">broadcast = function (d) {
+	data = d; //always use latest broadcast
+	if(queued) return;
+	queued = true;
+	setTimeout(broadcast, THROTTLE);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+//broadcast state on "update"
+var update = function(newFiles) {
+	//optionally update stored files
+	if(newFiles)
+		storedFiles = newFiles;
+	//broadcast state
+	ws.<span class="apidocCodeKeywordSpan">broadcast</span>({
+		config: config,
+		providers: search.providers,
+		torrents: torrents.list,
+		filesDownloading: torrents.filesDownloading,
+		uploads: storedFiles
+	});
+};
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.torrent-cloud.ws.install" id="apidoc.element.torrent-cloud.ws.install">
+        function <span class="apidocSignatureSpan">torrent-cloud.ws.</span>install
+        <span class="apidocSignatureSpan">(server)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">install = function (server) {
+
+	var ws = new WebSocket.Server({ server: server });
+
+	//this is required to allow the error to fall
+	//through to the http server
+	ws.on("error", function() {});
+
+	ws.on('connection', function connection(conn) {
+		//safe send
+		conn.ssend = function(str){
+			if(this.readyState === WebSocket.OPEN)
+				this.send(str);
+		};
+		//track all connections
+		conns.push(conn);
+		conn.on('close', function() {
+			var i = conns.indexOf(conn);
+			if(i &gt;= 0) conns.splice(i, 1);
+		});
+
+		//noop (dont buffer data)
+		conn.on('data', function() {
+		});
+
+		//initially sends the last broadcast
+		if(json) conn.ssend(json);
+	});
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+//global auth
+var user = process.env.AUTH_USER || 'admin';
+var password = process.env.AUTH_PASSWORD;
+if(password)
+	app.use(basicAuth(user, password));
+
+//hook http server
+ws.<span class="apidocCodeKeywordSpan">install</span>(server);
+
+//all requests have JSON body
+app.use(bodyParser.json());
+
+//convert all of the given module's
+//exposed functions into API endpoints
+function api(name, module) {
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
+</body></html>
