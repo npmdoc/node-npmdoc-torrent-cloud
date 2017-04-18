@@ -1,1 +1,39 @@
-{     "devDependencies": {         "torrent-cloud": "*",         "electron-lite": "kaizhu256/node-electron-lite#alpha",         "utility2": "kaizhu256/node-utility2#alpha"     },     "name":"npmdoc-torrent-cloud",     "homepage": "https://github.com/npmdoc/node-npmdoc-torrent-cloud",     "repository": {         "type": "git",         "url": "https://github.com/npmdoc/node-npmdoc-torrent-cloud.git"     },     "scripts": {         "build-ci": "utility2 shReadmeTest build_ci.sh"     },     "version": "0.0.1" }
+{
+    "author": "kai zhu <kaizhu256@gmail.com>",
+    "description": "#### api documentation for  torrent-cloud (v0.1.2)  [![npm package](https://img.shields.io/npm/v/npmdoc-torrent-cloud.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-torrent-cloud) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-torrent-cloud.svg)](https://travis-ci.org/npmdoc/node-npmdoc-torrent-cloud)",
+    "devDependencies": {
+        "electron-lite": "kaizhu256/node-electron-lite#alpha",
+        "torrent-cloud": "*",
+        "utility2": "kaizhu256/node-utility2#alpha"
+    },
+    "engines": {
+        "node": ">=4.0"
+    },
+    "homepage": "https://github.com/npmdoc/node-npmdoc-torrent-cloud",
+    "keywords": [
+        "documentation",
+        "torrent-cloud"
+    ],
+    "license": "MIT",
+    "main": "lib.npmdoc_torrent_cloud.js",
+    "name": "npmdoc-torrent-cloud",
+    "nameAlias": "npmdoc_torrent_cloud",
+    "nameOriginal": "npmdoc-torrent-cloud",
+    "os": [
+        "darwin",
+        "linux"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/npmdoc/node-npmdoc-torrent-cloud.git"
+    },
+    "scripts": {
+        "build-ci": "utility2 shReadmeTest build_ci.sh",
+        "env": "env",
+        "heroku-postbuild": "npm install \"kaizhu256/node-utility2#alpha\" && utility2 shDeployHeroku",
+        "postinstall": "[ ! -f npm_scripts.sh ] || ./npm_scripts.sh postinstall",
+        "start": "PORT=${PORT:-8080} utility2 start test.js",
+        "test": "(set -e; export PORT=$(utility2 shServerPortRandom); utility2 test test.js)"
+    },
+    "version": "0.0.1"
+}
